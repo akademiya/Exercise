@@ -2,6 +2,8 @@ package adv.vadym.com.tfexercise
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
@@ -15,12 +17,30 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setActionBar(toolbar)
         youtube_exercises.initialize(Config().YOUTUBE_API_KEY, this)
     }
 
+    /** app bar menu */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.settings -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    /** end app bar menu */
+
     override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
         if (!wasRestored) {
-            player?.cueVideo("IbyBfCnq5RA")
+            player?.cueVideo("Ov7imh65j84") //IbyBfCnq5RA
         }
     }
 

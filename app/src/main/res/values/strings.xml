@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">TFExercise</string>
-    <string name="title_exercise">Зарядка Истинного Отца</string>
+    <string name="app_name">TF Exercise</string>
+    <string name="title_exercise">TF Exercise</string>
+    <string name="settings">Settings</string>
 
     // YouTube
     <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="video_cod">Ov7imh65j84</string>
 </resources>
