@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/lightGreen</item>
         <item name="colorPrimaryDark">@color/green</item>
         <item name="colorAccent">@color/deepOrange</item>
+        <item name="android:textColorSecondary">@color/white</item>
     </style>
 
     // Toolbar

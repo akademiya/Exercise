@@ -18,6 +18,7 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setActionBar(toolbar)
+        actionBar.setDisplayShowTitleEnabled(false)
         youtube_exercises.initialize(Config().YOUTUBE_API_KEY, this)
     }
 
