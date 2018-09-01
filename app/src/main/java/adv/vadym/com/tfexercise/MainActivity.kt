@@ -41,7 +41,7 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
 
     override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
         if (!wasRestored) {
-            player?.cueVideo("Ov7imh65j84") //IbyBfCnq5RA
+            player?.cueVideo(resources.getString(R.string.video_cod_ru))
         }
     }
 
