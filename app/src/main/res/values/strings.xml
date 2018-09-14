@@ -8,11 +8,17 @@
     // YouTube
     <string name="player_error">Error initializing YouTube player: %s</string>
     <string name="video_cod_ru">Ov7imh65j84</string>
+    <string name="video_cod_jp">fuIyclSOD6A</string>
 
     <string-array name="language">
-        <item>en</item>
-        <item>ko</item>
-        <item>jp</item>
         <item>ru</item>
+        <item>jp</item>
     </string-array>
+
+    <string name="message_notification_title">Message: %1$s</string>
+    <string name="message_notification_text">Пора делать зарядку. 10 мин на упражнения.</string>
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+    <string name="notification">Notification</string>
+    <string name="select_language">Select language:</string>
 </resources>

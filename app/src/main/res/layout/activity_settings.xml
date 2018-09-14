@@ -24,7 +24,6 @@
                 android:id="@+id/button_save"
                 style="@style/ButtonToolbarWithStartEndPadding"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
                 android:text="@string/save" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
@@ -36,27 +35,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/parent_margin"
+            android:layout_marginStart="@dimen/parent_margin"
             android:orientation="vertical">
 
             <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sw_notify"
+                style="@style/TextStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
-                android:text="Notification" />
+                android:layout_height="@dimen/sw_height"
+                android:layout_marginTop="@dimen/space8"
+                android:text="@string/notification" />
 
             <TextView
+                style="@style/TextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Select language:" />
+                android:layout_marginTop="@dimen/space12"
+                android:text="@string/select_language" />
 
             <Spinner
                 android:id="@+id/sp_language"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_marginTop="@dimen/space8"
                 android:backgroundTint="@color/black" />
 
             <View

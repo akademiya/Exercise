@@ -1,5 +1,6 @@
 package adv.vadym.com.tfexercise
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
@@ -10,7 +11,9 @@ import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity() {
 
-    private var selectedLanguage = ""
+    private val messageNotification = MessageNotification
+    private var toggleSwitcher = false
+    private var languageId = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,14 +29,27 @@ class SettingsActivity : AppCompatActivity() {
         )
         spLanguageAdapter.setDropDownViewResource(R.layout.spinner_drop_down)
         sp_language.adapter = spLanguageAdapter
+        sp_language.setSelection(messageNotification.languageId)
         sp_language.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                selectedLanguage = spLanguageAdapter.getItem(position).toString()
+                languageId = position
             }
         }
 
-        button_save.setOnClickListener {  }
+        button_save.setOnClickListener {
+            messageNotification.saveSelectedLanguage(languageId)
+            messageNotification.saveToggleSwitchNotify(toggleSwitcher)
+            if (toggleSwitcher) {
+                messageNotification.notify(this, "TF Exercise", 1)
+            }
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        sw_notify.isChecked = messageNotification.switcher
+        sw_notify.setOnCheckedChangeListener { _, isChecked ->
+            toggleSwitcher = isChecked
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

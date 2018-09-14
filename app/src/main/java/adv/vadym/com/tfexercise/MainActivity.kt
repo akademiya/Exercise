@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
 
     private val RECOVERY_REQUEST = 1
+    private val messageNotification = MessageNotification
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,10 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
 
     override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
         if (!wasRestored) {
-            player?.cueVideo(resources.getString(R.string.video_cod_ru))
+            if (messageNotification.languageId == 0)
+                player?.cueVideo(resources.getString(R.string.video_cod_ru))
+            else if (messageNotification.languageId == 1)
+                player?.cueVideo(resources.getString(R.string.video_cod_jp))
         }
     }
 

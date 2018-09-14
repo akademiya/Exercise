@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="space8">8dp</dimen>
+    <dimen name="space12">12dp</dimen>
+    <dimen name="parent_margin">16dp</dimen>
     <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="sw_height">48dp</dimen>
+    <dimen name="spinner_height">32dp</dimen>
+
+    <dimen name="text_size">16sp</dimen>
 </resources>
