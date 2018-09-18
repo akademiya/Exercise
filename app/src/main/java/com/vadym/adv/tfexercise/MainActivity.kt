@@ -1,4 +1,4 @@
-package adv.vadym.com.tfexercise
+package com.vadym.adv.tfexercise
 
 import android.content.Intent
 import android.os.Bundle
@@ -42,10 +42,11 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
 
     override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
         if (!wasRestored) {
-            if (messageNotification.languageId == 0)
-                player?.cueVideo(resources.getString(R.string.video_cod_ru))
-            else if (messageNotification.languageId == 1)
-                player?.cueVideo(resources.getString(R.string.video_cod_jp))
+            when {
+                messageNotification.languageId == 0 -> player?.cueVideo(resources.getString(R.string.video_cod_ko))
+                messageNotification.languageId == 1 -> player?.cueVideo(resources.getString(R.string.video_cod_jp))
+                messageNotification.languageId == 2 -> player?.cueVideo(resources.getString(R.string.video_cod_ru))
+            }
         }
     }
 

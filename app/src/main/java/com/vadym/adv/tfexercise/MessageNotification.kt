@@ -1,4 +1,4 @@
-package adv.vadym.com.tfexercise
+package com.vadym.adv.tfexercise
 
 import android.annotation.SuppressLint
 import android.annotation.TargetApi

@@ -1,4 +1,4 @@
-package adv.vadym.com.tfexercise
+package com.vadym.adv.tfexercise
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

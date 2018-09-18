@@ -1,4 +1,4 @@
-package adv.vadym.com.tfexercise
+package com.vadym.adv.tfexercise
 
 import android.content.Intent
 import android.os.Bundle
