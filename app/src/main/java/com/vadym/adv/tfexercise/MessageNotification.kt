@@ -16,8 +16,6 @@ import android.support.v4.app.NotificationCompat
 object MessageNotification {
 
     private val NOTIFICATION_TAG = "Message"
-    var switcher = false
-    var languageId = 0
 
     fun notify(context: Context, exampleString: String, number: Int) {
         val res = context.resources
@@ -103,11 +101,4 @@ object MessageNotification {
         }
     }
 
-    fun saveToggleSwitchNotify(isChecked: Boolean) {
-        switcher = isChecked
-    }
-
-    fun saveSelectedLanguage(id: Int) {
-        languageId = id
-    }
 }

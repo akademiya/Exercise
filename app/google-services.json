@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "32215879717",
+    "firebase_url": "https://tf-exercise-adv.firebaseio.com",
+    "project_id": "tf-exercise-adv",
+    "storage_bucket": "tf-exercise-adv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32215879717:android:a18555515bac4379",
+        "android_client_info": {
+          "package_name": "adv.vadym.com.tfexercise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32215879717-qdpb980am4fagvt99nf3cvmiek273rnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmHa7zD6cpqn81HtyiYF59wCvxcpD85bQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

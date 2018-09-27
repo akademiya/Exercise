@@ -7,11 +7,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import com.google.android.gms.analytics.HitBuilders
 import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity() {
 
     private val messageNotification = MessageNotification
+    private val presenter = Presenter
     private var toggleSwitcher = false
     private var languageId = 0
 
@@ -21,6 +23,8 @@ class SettingsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        tracker().setScreenName("Settings Activity")
+        tracker().send(HitBuilders.ScreenViewBuilder().build())
 
         val spLanguageAdapter = ArrayAdapter.createFromResource(
                 this,
@@ -29,7 +33,7 @@ class SettingsActivity : AppCompatActivity() {
         )
         spLanguageAdapter.setDropDownViewResource(R.layout.spinner_drop_down)
         sp_language.adapter = spLanguageAdapter
-        sp_language.setSelection(messageNotification.languageId)
+        sp_language.setSelection(presenter.languageId)
         sp_language.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -38,15 +42,15 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         button_save.setOnClickListener {
-            messageNotification.saveSelectedLanguage(languageId)
-            messageNotification.saveToggleSwitchNotify(toggleSwitcher)
+            presenter.saveSelectedLanguage(languageId)
+            presenter.saveToggleSwitchNotify(toggleSwitcher)
             if (toggleSwitcher) {
                 messageNotification.notify(this, "TF Exercise", 1)
             }
             startActivity(Intent(this, MainActivity::class.java))
         }
 
-        sw_notify.isChecked = messageNotification.switcher
+        sw_notify.isChecked = presenter.switcher
         sw_notify.setOnCheckedChangeListener { _, isChecked ->
             toggleSwitcher = isChecked
         }
