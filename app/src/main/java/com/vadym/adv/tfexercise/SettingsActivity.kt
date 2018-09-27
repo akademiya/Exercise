@@ -38,6 +38,11 @@ class SettingsActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 languageId = position
+                tracker().send(HitBuilders.EventBuilder()
+                        .setAction("Selected language")
+                        .setValue(languageId.toLong())
+                        .build()
+                )
             }
         }
 
@@ -50,10 +55,11 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
-        sw_notify.isChecked = presenter.switcher
-        sw_notify.setOnCheckedChangeListener { _, isChecked ->
-            toggleSwitcher = isChecked
-        }
+//        TODO: notification
+//        sw_notify.isChecked = presenter.switcher
+//        sw_notify.setOnCheckedChangeListener { _, isChecked ->
+//            toggleSwitcher = isChecked
+//        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

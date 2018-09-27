@@ -39,13 +39,13 @@
             android:layout_marginStart="@dimen/parent_margin"
             android:orientation="vertical">
 
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/sw_notify"
-                style="@style/TextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/sw_height"
-                android:layout_marginTop="@dimen/space8"
-                android:text="@string/notification" />
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--android:id="@+id/sw_notify"-->
+                <!--style="@style/TextStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/sw_height"-->
+                <!--android:layout_marginTop="@dimen/space8"-->
+                <!--android:text="@string/notification" />-->
 
             <TextView
                 style="@style/TextStyle"

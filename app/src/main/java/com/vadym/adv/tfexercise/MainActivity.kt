@@ -19,7 +19,6 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
 
     private val RECOVERY_REQUEST = 1
     private var presenter = Presenter
-    var isSwipeRefresh = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +30,6 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
         youtube_exercises.initialize(Config().YOUTUBE_API_KEY, this)
         adMob()
         updatePage()
-
     }
 
     /** app bar menu */
@@ -92,7 +90,6 @@ class MainActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener 
 
     private fun updatePage() {
         swipe_refresh.setOnRefreshListener {
-            isSwipeRefresh = true
             Thread(Runnable {
                 this@MainActivity.runOnUiThread { swipe_refresh.isRefreshing }
                 try {

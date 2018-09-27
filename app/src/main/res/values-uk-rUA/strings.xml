@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TF Exercise</string>
+    <string name="title_exercise">Зарядка Істинного Батька</string>
+    <string name="settings">Налаштування</string>
+    <string name="advertising">Реклама</string>
+    <string name="save">Зберегти</string>
+
+    // YouTube
+    <string name="player_error">Помилка ініціалізації YouTube player: %s</string>
+    <string name="video_cod_ru">Ov7imh65j84</string>
+    <string name="video_cod_jp">fuIyclSOD6A</string>
+    <string name="video_cod_ko">6_QzQ5KRDw8</string>
+
+    <string-array name="language">
+        <item>ko</item>
+        <item>jp</item>
+        <item>ru</item>
+    </string-array>
+
+    <string name="message_notification_title">Повідомлення: %1$s</string>
+    <string name="message_notification_text">Пора робити зарядку. 10 хв на вправи.</string>
+    <string name="action_share">Поділитися</string>
+    <string name="action_reply">Відповідь</string>
+    <string name="notification">Повідомлення</string>
+    <string name="select_language">Оберіть мову:</string>
+</resources>

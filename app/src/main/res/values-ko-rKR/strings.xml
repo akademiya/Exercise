@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TF Exercise</string>
+    <string name="title_exercise">참 아버님 운동</string>
+    <string name="settings">설정</string>
+    <string name="advertising">광고</string>
+    <string name="save">저장</string>
+
+    // YouTube
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="video_cod_ru">Ov7imh65j84</string>
+    <string name="video_cod_jp">fuIyclSOD6A</string>
+    <string name="video_cod_ko">6_QzQ5KRDw8</string>
+
+    <string-array name="language">
+        <item>ko</item>
+        <item>jp</item>
+        <item>ru</item>
+    </string-array>
+
+    <string name="message_notification_title">공고: %1$s</string>
+    <string name="message_notification_text">연습 할 시간입니다. 운동 10 분.</string>
+    <string name="action_share">몫</string>
+    <string name="action_reply">댓글</string>
+    <string name="notification">공고</string>
+    <string name="select_language">언어 선택:</string>
+</resources>
