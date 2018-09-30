@@ -23,4 +23,5 @@
     <string name="action_reply">Перейти</string>
     <string name="notification">Уведомление</string>
     <string name="select_language">Выбрать язык:</string>
+    <string name="rate_app">Оцінити додаток</string>
 </resources>

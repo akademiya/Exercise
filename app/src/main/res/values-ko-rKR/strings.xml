@@ -23,4 +23,5 @@
     <string name="action_reply">댓글</string>
     <string name="notification">공고</string>
     <string name="select_language">언어 선택:</string>
+    <string name="rate_app">앱 평가</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.vadym.adv.tfexercise
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
@@ -49,10 +50,19 @@ class SettingsActivity : AppCompatActivity() {
         button_save.setOnClickListener {
             presenter.saveSelectedLanguage(languageId)
             presenter.saveToggleSwitchNotify(toggleSwitcher)
-            if (toggleSwitcher) {
-                messageNotification.notify(this, "TF Exercise", 1)
-            }
+//            if (toggleSwitcher) { TODO: save toggle notification
+//                messageNotification.notify(this, "TF Exercise", 1)
+//            }
             startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        button_rate_app.setOnClickListener {
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.packageName)))
+            } catch (e: android.content.ActivityNotFoundException) {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + this.packageName)))
+            }
+
         }
 
 //        TODO: notification
