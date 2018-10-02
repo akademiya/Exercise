@@ -11,6 +11,7 @@
     <color name="background_no_internet">#ddffed22</color>
 
     // MATERIAL
+    <color name="superLightGreen">#a8d1aa</color> <!-- A500 Dark -->
     <color name="lightGreen">#8BC34A</color> <!--  A500 -->
     <color name="green">#4CAF50</color> <!-- A500 Dark -->
     <color name="deepOrange">#FF5722</color> <!--  500 Accent -->

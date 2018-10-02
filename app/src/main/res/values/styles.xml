@@ -51,7 +51,7 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-medium</item>
         <item name="android:paddingStart">16dp</item>
-        <item name="android:background">@color/lightGreen</item>
+        <item name="android:background">@drawable/button_background_green</item>
         <item name="android:paddingEnd">16dp</item>
         <item name="android:textSize">@dimen/text_size</item>
     </style>
